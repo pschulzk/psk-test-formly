@@ -1,1 +1,5 @@
-<p>dashboard works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit(model)">
+  <formly-form [form]="formGroup" [fields]="fields" [model]="model"></formly-form>
+  <p-button label="Submit"></p-button>
+</form>
+<pre>{{ formGroup.value | json }}</pre>
